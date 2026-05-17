@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 1rem;
+  --background: #ebe6f7;
+  --foreground: #1e1b2e;
+  --card: #ffffff;
+  --card-foreground: #1e1b2e;
+  --popover: #ffffff;
+  --popover-foreground: #1e1b2e;
+  --primary: #6d5bd0;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f0fb;
+  --secondary-foreground: #1e1b2e;
+  --muted: #e8e3f5;
+  --muted-foreground: #5c5670;
+  --accent: #ede8fa;
+  --accent-foreground: #1e1b2e;
+  --destructive: #dc2626;
+  --border: #ddd6f0;
+  --input: #ddd6f0;
+  --ring: #6d5bd0;
+}
+
+.dark {
+  --background: #14121f;
+  --foreground: #f3f0fb;
+  --card: #1f1c2e;
+  --card-foreground: #f3f0fb;
+  --popover: #1f1c2e;
+  --popover-foreground: #f3f0fb;
+  --primary: #9b8cff;
+  --primary-foreground: #14121f;
+  --secondary: #262338;
+  --secondary-foreground: #f3f0fb;
+  --muted: #262338;
+  --muted-foreground: #a39bb8;
+  --accent: #2d2940;
+  --accent-foreground: #f3f0fb;
+  --destructive: #f87171;
+  --border: #342f4a;
+  --input: #342f4a;
+  --ring: #9b8cff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
