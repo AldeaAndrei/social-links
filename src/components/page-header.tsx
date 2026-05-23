@@ -18,9 +18,14 @@ export function PageHeader({ profile }: PageHeaderProps) {
     <header className="relative -mx-4">
       <div className="relative h-36 w-full overflow-hidden sm:h-44">
         <img
-          src={assetUrl(profile.banner)}
+          src={assetUrl(profile.bannerLight)}
           alt=""
-          className="h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover dark:hidden"
+        />
+        <img
+          src={assetUrl(profile.bannerDark)}
+          alt=""
+          className="absolute inset-0 hidden h-full w-full object-cover dark:block"
         />
         <div
           className="absolute inset-x-0 bottom-0 h-12 bg-background"

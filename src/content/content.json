@@ -1,12 +1,13 @@
 {
   "site": {
     "ogImage": "/og-image.svg",
-    "themeColor": "#6d5bd0",
+    "themeColor": "#e64d19",
     "url": "https://example.com"
   },
   "profile": {
-    "avatar": "/avatar.svg",
-    "banner": "/banner.svg"
+    "avatar": "/profile.jpg",
+    "bannerLight": "/banner_white.png",
+    "bannerDark": "/banner_dark.png"
   },
   "footer": {
     "year": 2026

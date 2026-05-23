@@ -34,7 +34,8 @@ export interface SiteContent {
   };
   profile: {
     avatar: string;
-    banner: string;
+    bannerLight: string;
+    bannerDark: string;
   };
   footer: {
     year: number;
@@ -44,7 +45,7 @@ export interface SiteContent {
 
 export interface ResolvedContent {
   site: LocalizedStrings["site"] & Pick<SiteContent["site"], "ogImage" | "themeColor" | "url">;
-  profile: LocalizedStrings["profile"] & Pick<SiteContent["profile"], "avatar" | "banner">;
+  profile: LocalizedStrings["profile"] & Pick<SiteContent["profile"], "avatar" | "bannerLight" | "bannerDark">;
   sections: LocalizedStrings["sections"];
   footer: LocalizedStrings["footer"] & Pick<SiteContent["footer"], "year">;
 }

@@ -8,6 +8,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -26,49 +27,110 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --color-red-ochre-50: #fcede8;
+  --color-red-ochre-100: #fadbd1;
+  --color-red-ochre-200: #f5b8a3;
+  --color-red-ochre-300: #f09475;
+  --color-red-ochre-400: #eb7047;
+  --color-red-ochre-500: #e64d19;
+  --color-red-ochre-600: #b83d14;
+  --color-red-ochre-700: #8a2e0f;
+  --color-red-ochre-800: #5c1f0a;
+  --color-red-ochre-900: #2e0f05;
+  --color-red-ochre-950: #200b04;
+
+  --color-oxidized-iron-50: #fcede8;
+  --color-oxidized-iron-100: #f9dad2;
+  --color-oxidized-iron-200: #f3b6a5;
+  --color-oxidized-iron-300: #ed9178;
+  --color-oxidized-iron-400: #e86c4a;
+  --color-oxidized-iron-500: #e2481d;
+  --color-oxidized-iron-600: #b53917;
+  --color-oxidized-iron-700: #872b12;
+  --color-oxidized-iron-800: #5a1d0c;
+  --color-oxidized-iron-900: #2d0e06;
+  --color-oxidized-iron-950: #200a04;
+
+  --color-alabaster-grey-50: #f3f1f1;
+  --color-alabaster-grey-100: #e7e4e4;
+  --color-alabaster-grey-200: #d0c8c8;
+  --color-alabaster-grey-300: #b8adad;
+  --color-alabaster-grey-400: #a09292;
+  --color-alabaster-grey-500: #887777;
+  --color-alabaster-grey-600: #6d5f5f;
+  --color-alabaster-grey-700: #524747;
+  --color-alabaster-grey-800: #372f2f;
+  --color-alabaster-grey-900: #1b1818;
+  --color-alabaster-grey-950: #131111;
+
+  --color-bright-snow-50: #f5f3f0;
+  --color-bright-snow-100: #ebe7e0;
+  --color-bright-snow-200: #d6cfc2;
+  --color-bright-snow-300: #c2b8a3;
+  --color-bright-snow-400: #ada085;
+  --color-bright-snow-500: #998866;
+  --color-bright-snow-600: #7a6d52;
+  --color-bright-snow-700: #5c523d;
+  --color-bright-snow-800: #3d3629;
+  --color-bright-snow-900: #1f1b14;
+  --color-bright-snow-950: #15130e;
+
+  --color-gunmetal-50: #f2f2f3;
+  --color-gunmetal-100: #e5e6e6;
+  --color-gunmetal-200: #cbcccd;
+  --color-gunmetal-300: #b1b3b4;
+  --color-gunmetal-400: #979a9b;
+  --color-gunmetal-500: #7d8082;
+  --color-gunmetal-600: #646768;
+  --color-gunmetal-700: #4b4d4e;
+  --color-gunmetal-800: #323334;
+  --color-gunmetal-900: #191a1a;
+  --color-gunmetal-950: #111212;
 }
 
 :root {
   --radius: 1rem;
-  --background: #ebe6f7;
-  --foreground: #1e1b2e;
+
+  --background: #f5f3f0;
+  --foreground: #1b1818;
   --card: #ffffff;
-  --card-foreground: #1e1b2e;
+  --card-foreground: #1b1818;
   --popover: #ffffff;
-  --popover-foreground: #1e1b2e;
-  --primary: #6d5bd0;
+  --popover-foreground: #1b1818;
+  --primary: #e64d19;
   --primary-foreground: #ffffff;
-  --secondary: #f3f0fb;
-  --secondary-foreground: #1e1b2e;
-  --muted: #e8e3f5;
-  --muted-foreground: #5c5670;
-  --accent: #ede8fa;
-  --accent-foreground: #1e1b2e;
-  --destructive: #dc2626;
-  --border: #ddd6f0;
-  --input: #ddd6f0;
-  --ring: #6d5bd0;
+  --secondary: #ebe7e0;
+  --secondary-foreground: #1b1818;
+  --muted: #ebe7e0;
+  --muted-foreground: #6d5f5f;
+  --accent: #fcede8;
+  --accent-foreground: #5c1f0a;
+  --destructive: #b53917;
+  --border: #d0c8c8;
+  --input: #d0c8c8;
+  --ring: #e64d19;
 }
 
 .dark {
-  --background: #14121f;
-  --foreground: #f3f0fb;
-  --card: #1f1c2e;
-  --card-foreground: #f3f0fb;
-  --popover: #1f1c2e;
-  --popover-foreground: #f3f0fb;
-  --primary: #9b8cff;
-  --primary-foreground: #14121f;
-  --secondary: #262338;
-  --secondary-foreground: #f3f0fb;
-  --muted: #262338;
-  --muted-foreground: #a39bb8;
-  --accent: #2d2940;
-  --accent-foreground: #f3f0fb;
-  --destructive: #f87171;
-  --border: #342f4a;
-  --input: #342f4a;
-  --ring: #9b8cff;
+  --background: #111212;
+  --foreground: #f3f1f1;
+  --card: #191a1a;
+  --card-foreground: #f3f1f1;
+  --popover: #191a1a;
+  --popover-foreground: #f3f1f1;
+  --primary: #eb7047;
+  --primary-foreground: #131111;
+  --secondary: #323334;
+  --secondary-foreground: #f3f1f1;
+  --muted: #1b1818;
+  --muted-foreground: #b8adad;
+  --accent: #2e0f05;
+  --accent-foreground: #fadbd1;
+  --destructive: #ed9178;
+  --border: #323334;
+  --input: #323334;
+  --ring: #eb7047;
 }
 
 @layer base {
