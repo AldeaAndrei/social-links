@@ -1,14 +1,7 @@
 import { useEffect } from "react";
 
-import { assetUrl } from "@/lib/assets";
+import { absoluteAssetUrl } from "@/lib/share-meta";
 import type { ResolvedContent } from "@/types/content";
-
-function absoluteUrl(path: string, siteUrl: string) {
-  if (path.startsWith("http")) return path;
-  const base = siteUrl.replace(/\/$/, "");
-  const asset = path.startsWith("/") ? path.slice(1) : path;
-  return `${base}/${asset}`;
-}
 
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
@@ -28,19 +21,21 @@ export function SiteMeta({ content }: SiteMetaProps) {
   const { site } = content;
 
   useEffect(() => {
-    const ogImage = absoluteUrl(assetUrl(site.ogImage), site.url);
-
     document.title = site.title;
     setMeta("name", "description", site.description);
+
+    const ogImage = absoluteAssetUrl(site.ogImage, site.url);
+    const pageUrl = site.url.replace(/\/$/, "") || site.url;
+
     setMeta("name", "theme-color", site.themeColor);
     setMeta("property", "og:type", "website");
-    setMeta("property", "og:title", site.title);
-    setMeta("property", "og:description", site.description);
+    setMeta("property", "og:url", pageUrl);
+    setMeta("property", "og:title", site.shareTitle);
+    setMeta("property", "og:description", site.shareDescription);
     setMeta("property", "og:image", ogImage);
-    setMeta("property", "og:url", site.url);
     setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:title", site.title);
-    setMeta("name", "twitter:description", site.description);
+    setMeta("name", "twitter:title", site.shareTitle);
+    setMeta("name", "twitter:description", site.shareDescription);
     setMeta("name", "twitter:image", ogImage);
   }, [site]);
 

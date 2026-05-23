@@ -29,6 +29,8 @@ export interface LocalizedStrings {
 export interface SiteContent {
   site: {
     ogImage: string;
+    shareTitle: string;
+    shareDescription: string;
     themeColor: string;
     url: string;
   };
@@ -44,7 +46,8 @@ export interface SiteContent {
 }
 
 export interface ResolvedContent {
-  site: LocalizedStrings["site"] & Pick<SiteContent["site"], "ogImage" | "themeColor" | "url">;
+  site: LocalizedStrings["site"] &
+    Pick<SiteContent["site"], "ogImage" | "shareTitle" | "shareDescription" | "themeColor" | "url">;
   profile: LocalizedStrings["profile"] & Pick<SiteContent["profile"], "avatar" | "bannerLight" | "bannerDark">;
   sections: LocalizedStrings["sections"];
   footer: LocalizedStrings["footer"] & Pick<SiteContent["footer"], "year">;

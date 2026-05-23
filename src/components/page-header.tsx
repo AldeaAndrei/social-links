@@ -2,6 +2,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { assetUrl } from "@/lib/assets";
 import type { ResolvedContent } from "@/types/content";
 
+const bannerImageClass =
+  "absolute inset-0 h-full w-full object-cover object-top [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]";
+
 interface PageHeaderProps {
   profile: ResolvedContent["profile"];
 }
@@ -16,25 +19,26 @@ export function PageHeader({ profile }: PageHeaderProps) {
 
   return (
     <header className="relative -mx-4">
-      <div className="relative h-36 w-full overflow-hidden sm:h-44">
+      <div className="relative h-36 w-full sm:h-44">
         <img
           src={assetUrl(profile.bannerLight)}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover dark:hidden"
+          className={`${bannerImageClass} dark:hidden`}
         />
         <img
           src={assetUrl(profile.bannerDark)}
           alt=""
-          className="absolute inset-0 hidden h-full w-full object-cover dark:block"
+          className={`${bannerImageClass} hidden dark:block`}
         />
+        {/* Bottom 20% only — blends PNG edge into page background */}
         <div
-          className="absolute inset-x-0 bottom-0 h-12 bg-background"
-          style={{ clipPath: "ellipse(75% 100% at 50% 100%)" }}
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[20%] min-h-5 bg-gradient-to-t from-background to-transparent"
+          aria-hidden
         />
       </div>
 
-      <div className="-mt-14 flex flex-col items-center px-4 pb-2 text-center">
-        <Avatar className="size-24 border-4 border-background shadow-md">
+      <div className="relative z-10 -mt-14 flex flex-col items-center px-4 pb-2 text-center">
+        <Avatar className="size-24 border-4 border-background bg-background shadow-md">
           <AvatarImage src={assetUrl(profile.avatar)} alt={profile.name} />
           <AvatarFallback>{initials}</AvatarFallback>
         </Avatar>

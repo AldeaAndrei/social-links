@@ -1,8 +1,10 @@
 {
   "site": {
-    "ogImage": "/og-image.svg",
+    "ogImage": "/og_image.png",
+    "shareTitle": "Afacerea Ta",
+    "shareDescription": "Ne găsești pe rețelele sociale - toate linkurile într-un singur loc.",
     "themeColor": "#e64d19",
-    "url": "https://example.com"
+    "url": "https://aldeaandrei.github.io/social-links"
   },
   "profile": {
     "avatar": "/profile.jpg",
@@ -16,7 +18,7 @@
     "en": {
       "site": {
         "title": "Your Business",
-        "description": "Find us on social media — links in one place."
+        "description": "Find us on social media - links in one place."
       },
       "profile": {
         "name": "Your Business",
@@ -62,7 +64,7 @@
     "ro": {
       "site": {
         "title": "Afacerea Ta",
-        "description": "Ne găsești pe rețelele sociale — toate linkurile într-un singur loc."
+        "description": "Ne găsești pe rețelele sociale - toate linkurile într-un singur loc."
       },
       "profile": {
         "name": "Afacerea Ta",
