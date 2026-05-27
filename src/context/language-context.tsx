@@ -26,7 +26,7 @@ function resolveContent(data: SiteContent, locale: Locale): ResolvedContent {
     site: { ...data.site, ...strings.site },
     profile: { ...data.profile, ...strings.profile },
     sections: strings.sections,
-    footer: { year: data.footer.year, ...strings.footer },
+    footer: { year: data.footer.year, location: data.footer.location, ...strings.footer },
   };
 }
 

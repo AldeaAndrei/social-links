@@ -41,6 +41,7 @@ export interface SiteContent {
   };
   footer: {
     year: number;
+    location: string;
   };
   i18n: Record<Locale, LocalizedStrings>;
 }
@@ -50,5 +51,5 @@ export interface ResolvedContent {
     Pick<SiteContent["site"], "ogImage" | "shareTitle" | "shareDescription" | "themeColor" | "url">;
   profile: LocalizedStrings["profile"] & Pick<SiteContent["profile"], "avatar" | "bannerLight" | "bannerDark">;
   sections: LocalizedStrings["sections"];
-  footer: LocalizedStrings["footer"] & Pick<SiteContent["footer"], "year">;
+  footer: LocalizedStrings["footer"] & Pick<SiteContent["footer"], "year" | "location">;
 }

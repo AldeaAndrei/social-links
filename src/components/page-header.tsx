@@ -30,7 +30,6 @@ export function PageHeader({ profile }: PageHeaderProps) {
           alt=""
           className={`${bannerImageClass} hidden dark:block`}
         />
-        {/* Bottom 20% only — blends PNG edge into page background */}
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0 h-[20%] min-h-5 bg-gradient-to-t from-background to-transparent"
           aria-hidden

@@ -6,7 +6,8 @@ interface SiteFooterProps {
 
 export function SiteFooter({ footer }: SiteFooterProps) {
   return (
-    <footer className="py-8 text-center text-sm text-muted-foreground">
+    <footer className="space-y-2 py-8 text-center text-sm text-muted-foreground">
+      <p>{footer.location}</p>
       <p>
         {footer.copyright} © {footer.year} {footer.name}
       </p>
