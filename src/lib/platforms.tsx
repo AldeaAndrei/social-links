@@ -1,5 +1,6 @@
 import type { ReactElement } from "react";
 
+import { assetUrl } from "@/lib/assets";
 import type { Platform } from "@/types/content";
 
 const platformStyles: Record<Platform, { bg: string; label: string }> = {
@@ -7,6 +8,7 @@ const platformStyles: Record<Platform, { bg: string; label: string }> = {
   facebook: { bg: "bg-[#1877F2]", label: "Facebook" },
   youtube: { bg: "bg-[#FF0000]", label: "YouTube" },
   tiktok: { bg: "bg-black dark:bg-[#010101]", label: "TikTok" },
+  squash4all: { bg: "bg-[#1b1818] dark:bg-[#131111]", label: "Squash4all" },
 };
 
 export function getPlatformStyle(platform: Platform) {
@@ -45,11 +47,23 @@ function IconTiktok() {
   );
 }
 
+function IconSquash4all() {
+  return (
+    <img
+      src={assetUrl("/logosquashwhite.png")}
+      alt=""
+      className="size-8 max-w-none scale-125 object-contain"
+      aria-hidden
+    />
+  );
+}
+
 const icons: Record<Platform, () => ReactElement> = {
   instagram: IconInstagram,
   facebook: IconFacebook,
   youtube: IconYoutube,
   tiktok: IconTiktok,
+  squash4all: IconSquash4all,
 };
 
 export function PlatformIcon({ platform }: { platform: Platform }) {

@@ -1,4 +1,4 @@
-export type Platform = "facebook" | "instagram" | "youtube" | "tiktok";
+export type Platform = "facebook" | "instagram" | "youtube" | "tiktok" | "squash4all";
 export type Locale = "en" | "ro";
 
 export interface LocalizedStrings {

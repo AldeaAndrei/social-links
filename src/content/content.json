@@ -53,6 +53,12 @@
               "platform": "tiktok",
               "label": "TikTok",
               "url": "https://www.tiktok.com/@ssquashacademy"
+            },
+            {
+              "id": "squash4all-booking",
+              "platform": "squash4all",
+              "label": "Book at Squash4all",
+              "url": "https://squash4all.ro/booking/"
             }
           ]
         }
@@ -99,6 +105,12 @@
               "platform": "tiktok",
               "label": "TikTok",
               "url": "https://www.tiktok.com/@ssquashacademy"
+            },
+            {
+              "id": "squash4all-booking",
+              "platform": "squash4all",
+              "label": "Rezervă la Squash4all",
+              "url": "https://squash4all.ro/booking/"
             }
           ]
         }

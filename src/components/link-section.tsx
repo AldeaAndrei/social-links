@@ -10,7 +10,7 @@ export function LinkSection({ section, startIndex }: LinkSectionProps) {
   return (
     <section className="space-y-3">
       <h2 className="px-1 text-sm font-semibold tracking-wide text-foreground/90">{section.title}</h2>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         {section.links.map((link, i) => (
           <LinkCard
             key={link.id}
