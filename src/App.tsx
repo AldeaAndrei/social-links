@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import content from "@/content/content.json";
 import { LinkSection } from "@/components/link-section";
 import { Navbar } from "@/components/navbar";
@@ -5,6 +7,7 @@ import { PageHeader } from "@/components/page-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteMeta } from "@/components/site-meta";
 import { LanguageProvider, useLanguage } from "@/context/language-context";
+import { trackPageView } from "@/lib/analytics";
 import type { SiteContent } from "@/types/content";
 
 const siteData = content as SiteContent;
@@ -12,6 +15,10 @@ const siteData = content as SiteContent;
 function Page() {
   const { content } = useLanguage();
   let linkIndex = 0;
+
+  useEffect(() => {
+    trackPageView();
+  }, []);
 
   return (
     <>

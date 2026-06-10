@@ -2,17 +2,19 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
+import { trackLinkClick } from "@/lib/analytics";
 import { getPlatformStyle, PlatformIcon } from "@/lib/platforms";
 import type { Platform } from "@/types/content";
 
 interface LinkCardProps {
+  linkId: string;
   platform: Platform;
   label: string;
   url: string;
   index: number;
 }
 
-export function LinkCard({ platform, label, url, index }: LinkCardProps) {
+export function LinkCard({ linkId, platform, label, url, index }: LinkCardProps) {
   const reduceMotion = useReducedMotion();
   const style = getPlatformStyle(platform);
 
@@ -26,6 +28,7 @@ export function LinkCard({ platform, label, url, index }: LinkCardProps) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackLinkClick(linkId)}
         className="block outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-3xl"
       >
         <Card className="flex items-center gap-4 border-border/80 p-4 transition-transform hover:scale-[1.02] active:scale-[0.99]">

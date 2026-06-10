@@ -14,6 +14,7 @@ export function LinkSection({ section, startIndex }: LinkSectionProps) {
         {section.links.map((link, i) => (
           <LinkCard
             key={link.id}
+            linkId={link.id}
             platform={link.platform}
             label={link.label}
             url={link.url}
